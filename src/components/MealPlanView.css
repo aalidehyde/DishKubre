@@ -1,0 +1,755 @@
+/* ==================== MEAL PLAN VIEW ==================== */
+
+.meal-plan-page,
+.meal-plan-page * {
+  font-family: "Tango Sans", sans-serif;
+}
+
+.meal-plan-page {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 35px 30px 130px;
+  box-sizing: border-box;
+
+  background: linear-gradient(
+    90deg,
+    rgba(238, 250, 230, 1) 0%,
+    rgba(201, 233, 255, 1) 100%
+  );
+
+  color: #17251f;
+}
+
+.mp-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.mp-back-btn {
+  padding: 10px 18px;
+  border: 2px solid #4c8ade;
+  border-radius: 25px;
+  background: white;
+  color: #4c8ade;
+  font-family: "Tango Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mp-back-btn:hover {
+  background: #eaf5ff;
+}
+
+.mp-title-block {
+  text-align: center;
+  flex: 1;
+}
+
+.mp-title-block h1 {
+  margin: 0;
+  font-family: "Tango Sans", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #17251f;
+}
+
+.mp-title-block p {
+  margin: 4px 0 0;
+  color: #718078;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.mp-edit-profile-btn {
+  padding: 11px 18px;
+  border: none;
+  border-radius: 25px;
+  background: #17251f;
+  color: white;
+  font-family: "Tango Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.mp-edit-profile-btn:hover {
+  background: #2b4238;
+}
+
+/* ==================== PRE-LOADED PROFILE CARD ==================== */
+
+.mp-profile-card {
+  background: white;
+  border: 2px solid #d9dedb;
+  border-radius: 24px;
+  padding: 18px 22px;
+  margin-bottom: 18px;
+  box-shadow: 0 8px 20px rgba(23, 37, 31, 0.08);
+}
+
+.mp-profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.mp-profile-header h2 {
+  margin: 0;
+  font-family: "Tango Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #17251f;
+}
+
+.mp-profile-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: #eefaf5;
+  border: 1px solid #4c8ade;
+  color: #006b4d;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.mp-profile-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px 16px;
+  align-items: start;
+}
+
+.mp-profile-item {
+  background: #f7fbf9;
+  border-radius: 14px;
+  padding: 10px 12px;
+}
+
+.mp-profile-label {
+  display: block;
+  font-family: "Tango Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #718078;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.mp-profile-value {
+  font-family: "Tango Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #17251f;
+  line-height: 1.35;
+}
+
+.mp-ingredients-vertical {
+  max-height: 118px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-right: 4px;
+}
+
+.mp-ingredient-line {
+  font-family: "Tango Sans", sans-serif;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #17251f;
+  line-height: 1.3;
+  padding: 3px 8px;
+  border-radius: 8px;
+  background: white;
+  border: 1px solid #e6ece9;
+}
+
+/* ==================== WEEKLY BUDGET TRACKER ==================== */
+
+.mp-budget-card {
+  background: white;
+  border-radius: 24px;
+  padding: 20px 22px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 20px rgba(23, 37, 31, 0.1);
+}
+
+.mp-budget-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.mp-budget-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.mp-metric {
+  display: flex;
+  flex-direction: column;
+}
+
+.mp-metric-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #718078;
+}
+
+.mp-metric-value {
+  font-size: 22px;
+  font-weight: 700;
+  color: #17251f;
+}
+
+.mp-metric-value.ok {
+  color: #006b4d;
+}
+
+.mp-metric-value.over {
+  color: #c0392b;
+}
+
+.mp-generate-btn {
+  padding: 14px 22px;
+  border: none;
+  border-radius: 30px;
+  background: #4c8ade;
+  color: white;
+  font-family: "Tango Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(76, 138, 222, 0.3);
+}
+
+.mp-generate-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.mp-budget-bar-track {
+  width: 100%;
+  height: 10px;
+  background: #e6ece9;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 14px;
+}
+
+.mp-budget-bar-fill {
+  height: 100%;
+  background: #4c8ade;
+  border-radius: 20px;
+  transition: width 0.3s ease;
+}
+
+.mp-budget-bar-fill.over {
+  background: #c0392b;
+}
+
+/* ==================== DAY 1-7 SELECTOR ==================== */
+
+.mp-day-scroll {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  margin-bottom: 18px;
+  scrollbar-width: none;
+}
+
+.mp-day-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.mp-day-pill {
+  flex: 1 0 88px;
+  padding: 12px 10px;
+  border: 2px solid #e0e5e2;
+  border-radius: 20px;
+  background: white;
+  color: #17251f;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mp-day-pill.active {
+  background: #4c8ade;
+  border-color: #4c8ade;
+  color: white;
+  box-shadow: 0 6px 16px rgba(76, 138, 222, 0.28);
+}
+
+.mp-day-pill-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  opacity: 0.85;
+}
+
+.mp-day-pill-num {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.mp-day-pill-cost {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  margin-top: 3px;
+}
+
+/* ==================== DAY NUTRITION & SAFETY CARD ==================== */
+
+.mp-day-summary-card {
+  background: white;
+  border-radius: 24px;
+  padding: 18px 22px;
+  margin-bottom: 18px;
+  box-shadow: 0 8px 20px rgba(23, 37, 31, 0.08);
+}
+
+.mp-day-summary-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.mp-day-summary-top h3 {
+  margin: 0;
+  font-family: "Tango Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.mp-day-kcal-badge {
+  font-size: 14px;
+  font-weight: 700;
+  color: #006b4d;
+  background: #eefaf5;
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+
+.mp-macro-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.mp-macro-box {
+  background: #f7fbf9;
+  border-radius: 16px;
+  padding: 10px;
+  text-align: center;
+}
+
+.mp-macro-box span {
+  display: block;
+  font-size: 11px;
+  color: #718078;
+  font-weight: 700;
+}
+
+.mp-macro-box strong {
+  display: block;
+  font-size: 16px;
+  margin-top: 2px;
+  color: #17251f;
+}
+
+.mp-safety-banner {
+  margin-top: 12px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: linear-gradient(90deg, #e6f7ee 0%, #eaf5ff 100%);
+  color: #17251f;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* ==================== MEAL SLOTS (BREAKFAST / LUNCH / DINNER) ==================== */
+
+.mp-meals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mp-meal-slot-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  padding: 0 4px;
+}
+
+.mp-meal-type-label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #5d6964;
+  text-transform: uppercase;
+}
+
+.mp-replace-btn {
+  padding: 6px 14px;
+  border: 1.5px solid #4c8ade;
+  border-radius: 20px;
+  background: white;
+  color: #4c8ade;
+  font-family: "Tango Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mp-replace-btn:hover {
+  background: #4c8ade;
+  color: white;
+}
+
+.mp-replace-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.mp-meal-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: white;
+  border-radius: 24px;
+  padding: 18px 20px;
+  box-shadow: 0 8px 20px rgba(23, 37, 31, 0.1);
+  cursor: pointer;
+  transition: transform 0.18s ease;
+}
+
+.mp-meal-card:hover {
+  transform: translateY(-2px);
+}
+
+.mp-meal-card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.mp-meal-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.mp-meal-card-top h4 {
+  margin: 0;
+  font-family: "Tango Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #17251f;
+}
+
+.mp-meal-cost {
+  font-size: 18px;
+  font-weight: 700;
+  color: #006b4d;
+  white-space: nowrap;
+}
+
+.mp-meal-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #718078;
+}
+
+.mp-meal-safety {
+  margin: 8px 0 0;
+  font-size: 12px;
+  color: #006b4d;
+  font-weight: 700;
+}
+
+.mp-meal-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.mp-meal-tag {
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid #4c8ade;
+  color: #4c8ade;
+  font-size: 11px;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.mp-view-details-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #4c8ade;
+  text-decoration: underline;
+}
+
+.mp-meal-thumb-wrap {
+  width: 112px;
+  height: 112px;
+  flex-shrink: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #eef6f2;
+  border: 2px solid #e0e5e2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mp-meal-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.mp-meal-thumb-fallback {
+  font-size: 28px;
+}
+
+/* ==================== EMPTY STATE ==================== */
+
+.mp-empty-state {
+  background: white;
+  border-radius: 28px;
+  padding: 36px 24px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(23, 37, 31, 0.08);
+}
+
+.mp-empty-state img {
+  width: 85px;
+  height: 85px;
+  object-fit: contain;
+}
+
+.mp-empty-state h3 {
+  margin: 12px 0 6px;
+  font-size: 22px;
+}
+
+.mp-empty-state p {
+  margin: 0 auto 20px;
+  max-width: 500px;
+  color: #718078;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ==================== MODALS (EDIT PREFERENCES & MEAL DETAIL) ==================== */
+
+.mp-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(23, 37, 31, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  z-index: 250;
+}
+
+.mp-modal-card {
+  width: 100%;
+  max-width: 640px;
+  max-height: 88vh;
+  overflow-y: auto;
+  background: white;
+  border-radius: 28px;
+  padding: 26px 24px;
+  box-shadow: 0 14px 36px rgba(23, 37, 31, 0.25);
+}
+
+.mp-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.mp-modal-header h2 {
+  margin: 0;
+  font-family: "Tango Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.mp-modal-close {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: #f0f4f2;
+  color: #17251f;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mp-modal-dish-img {
+  width: 100%;
+  max-height: 210px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin-bottom: 14px;
+}
+
+.mp-field-group {
+  margin-bottom: 16px;
+}
+
+.mp-field-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #17251f;
+  margin-bottom: 6px;
+}
+
+.mp-text-input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid #e0e5e2;
+  border-radius: 14px;
+  font-family: "Tango Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #17251f;
+  outline: none;
+}
+
+.mp-text-input:focus {
+  border-color: #4c8ade;
+}
+
+.mp-preset-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.mp-preset-chip {
+  padding: 6px 12px;
+  border: 1.5px solid #4c8ade;
+  border-radius: 20px;
+  background: white;
+  color: #4c8ade;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mp-preset-chip.active,
+.mp-preset-chip:hover {
+  background: #4c8ade;
+  color: white;
+}
+
+.mp-chip-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.mp-toggle-chip {
+  padding: 7px 12px;
+  border: 1.5px solid #d5dcd8;
+  border-radius: 18px;
+  background: white;
+  color: #17251f;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mp-toggle-chip.selected {
+  border-color: #4c8ade;
+  background: #eefaf5;
+  color: #006b4d;
+}
+
+.mp-modal-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.mp-modal-actions button {
+  flex: 1;
+  padding: 14px;
+  border-radius: 16px;
+  font-family: "Tango Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mp-secondary-btn {
+  border: 2px solid #4c8ade;
+  background: white;
+  color: #4c8ade;
+}
+
+.mp-primary-btn {
+  border: none;
+  background: #4c8ade;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .meal-plan-page {
+    padding: 22px 16px 120px;
+  }
+
+  .mp-profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mp-macro-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mp-meal-thumb-wrap {
+    width: 88px;
+    height: 88px;
+  }
+}

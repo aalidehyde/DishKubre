@@ -1,0 +1,110 @@
+.recipe-details-page {
+  width: 100%;
+  max-width: 900px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 30px;
+  box-sizing: border-box;
+
+  background: linear-gradient(
+    90deg,
+    rgba(238, 250, 230, 1) 0%,
+    rgba(201, 233, 255, 1) 100%
+  );
+
+  color: #17251f;
+}
+
+.recipe-details-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.recipe-details-header h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #17251f;
+  font-family: inherit;
+}
+
+.back-button,
+.details-save-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 28px;
+  color: #17251f;
+}
+
+.details-save-button.saved {
+  color: #4d9de0;
+}
+
+.details-image-container {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 25px;
+  background: #e5e5e5;
+}
+
+.details-recipe-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recipe-details-content {
+  padding: 25px 5px;
+}
+
+.recipe-details-title,
+.recipe-details-content h2 {
+  margin: 0;
+  font-size: 32px;
+  color: #17251f;
+  font-family: inherit;
+}
+
+.details-time {
+  color: #4b5563;
+  margin-top: 8px;
+}
+
+.details-section {
+  margin-top: 30px;
+}
+
+.details-section h3 {
+  margin-bottom: 12px;
+  color: #17251f;
+  font-family: inherit;
+}
+
+.details-benefits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.details-benefit-tag {
+  padding: 8px 14px;
+  border: 1px solid #4d9de0;
+  border-radius: 20px;
+  color: #4d9de0;
+  background: white;
+}
+
+.ingredients-list,
+.instructions-list {
+  padding-left: 25px;
+}
+
+.ingredients-list li,
+.instructions-list li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}

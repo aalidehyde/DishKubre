@@ -1,0 +1,119 @@
+.user-page {
+  width: 100%;
+  max-width: 1120px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 28px 28px 120px;
+  box-sizing: border-box;
+
+  background: linear-gradient(
+    115deg,
+    rgba(238, 250, 230, 1) 0%,
+    rgba(220, 244, 245, 1) 48%,
+    rgba(201, 233, 255, 1) 100%
+  );
+
+  color: #17251f;
+  font-family: "Tango Sans", sans-serif;
+}
+
+.user-page-header {
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.user-page-header h1 {
+  margin: 0;
+  color: #17251f;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.user-page-header p {
+  margin: 6px 0 0;
+  color: #5d6964;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.dishkubre-info-card {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 24px;
+  box-sizing: border-box;
+
+  border: 2px solid rgba(255, 255, 255, 0.95);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 8px 22px rgba(23, 37, 31, 0.08);
+  text-align: left;
+}
+
+.dishkubre-card-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.dishkubre-kubi-avatar {
+  width: 60px;
+  height: 60px;
+  padding: 4px;
+  box-sizing: border-box;
+  border-radius: 18px;
+  background: #eef6ff;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.dishkubre-card-top h2 {
+  margin: 0;
+  color: #17251f;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.dishkubre-badge {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: #edf5ff;
+  color: #3a75c4;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.dishkubre-description {
+  margin: 0 0 18px;
+  color: #3f4b45;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.dishkubre-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.dishkubre-pill {
+  padding: 5px 12px;
+  border: 1px solid #4c8ade;
+  border-radius: 20px;
+  background: #f5f9ff;
+  color: #3a75c4;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .user-page {
+    padding: 24px 18px 110px;
+  }
+
+  .user-page-header h1 {
+    font-size: 28px;
+  }
+}
